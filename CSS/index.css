@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Yekan";
+  src: url(../Fonts/YekanBakh-Regular.ttf) format("truetype");
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Yekan Bakh";
+  font-family: "Yekan";
+  background-color: #e5e5e5;
+}
+main {
+  padding: 45px 150px;
 }
