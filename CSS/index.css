@@ -1,3 +1,6 @@
+/* 
+LOGO COLOR:#2D283D
+*/
 @font-face {
   font-family: "Yekan";
   src: url(../Fonts/YekanBakh-Regular.ttf) format("truetype");
@@ -11,6 +14,58 @@ body {
   font-family: "Yekan";
   background-color: #e5e5e5;
 }
-main {
-  padding: 45px 150px;
+header {
+  background-color: #fff;
+}
+.container {
+  padding: 20px 150px;
+}
+.h-content {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* NAVBAR */
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  padding: 15px;
+}
+/* LOGO */
+.logo {
+  padding: 20px;
+  color: #2d283d;
+  font-size: 30px;
+  font-weight: 400;
+}
+.logo-time {
+  color: #f8c030;
+}
+.date-time {
+  /*  padding: 30px; */
+
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+}
+.date-time li {
+  padding: 0 8px;
+  font-size: 18px;
+  color: #373341;
+}
+
+.moon {
+  border-right: #e3e3f1 1px solid;
 }
