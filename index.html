@@ -9,95 +9,98 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./CSS/index.css" />
+
     <title>MarketTime</title>
   </head>
   <body>
     <!-- -------------------------------Header------------------------------------ -->
-    <header>
-      <section class="container h-content">
-        <nav>
+    <header class="header">
+      <section class="container">
+        <section class="navbar">
+          <nav class="nav">
+            <ul class="nav-menu">
+              <li>
+                <a href="#" class="nav-link"
+                  ><img src="./media/instagram.svg" alt="instagram-icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="nav-link"
+                  ><img src="./media/twitter.svg" alt="twitter-icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="nav-link"
+                  ><img src="./media/telegram.svg" alt="telegram-icon"
+                /></a>
+              </li>
+              <li>
+                <a href="#" class="nav-link"
+                  ><img src="./media/facebook.svg" alt="facebook-icon"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="toggle-button">
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </a>
+          <section class="logo">
+            <p>market<span class="logo-time">time</span>.ir</p>
+          </section>
+          <section class="date-time">
+            <span class="time">1:20:37</span><span>-</span
+            ><span class="date">3/14/2021</span>
+            <span><img src="./media/time-circle.svg" alt="time-circle" /></span>
+            <span class="moon"><img src="./media/moon.svg" alt="moon" /></span>
+          </section>
+        </section>
+
+        <section class="slideshow-container">
+          <a href="#" class="control-next"
+            ><i class="fa-solid fa-angle-right"></i
+          ></a>
+          <a href="#" class="control-prev"
+            ><i class="fa-solid fa-angle-left"></i
+          ></a>
           <ul>
             <li>
-              <a href="#"
-                ><img src="./media/instagram.svg" alt="instagram-icon"
-              /></a>
+              <span
+                >انس طلا<span><span>(۰.۳+)</span> ۱،۷۲۷.۵۵ </span></span
+              >
             </li>
             <li>
-              <a href="#"
-                ><img src="./media/twitter.svg" alt="twitter-icon"
-              /></a>
+              <span
+                >نفت برنت<span><span>(۰.۸+)</span> ۶،۹۱۸ </span></span
+              >
             </li>
             <li>
-              <a href="#"
-                ><img src="./media/telegram.svg" alt="telegram-icon"
-              /></a>
+              <span
+                >شاخص دلار<span><span>(۰.۳+)</span> ۱،۷۲۷.۵۵ </span></span
+              >
             </li>
             <li>
-              <a href="#"
-                ><img src="./media/facebook.svg" alt="facebook-icon"
-              /></a>
+              <span
+                >شاخص کل<span><span>(۰.۸-)</span> ۲۴۱،۷۷۰ </span></span
+              >
+            </li>
+            <li>
+              <span
+                >شاخص یورو<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
+              >
+            </li>
+            <li>
+              <span
+                >شاخص پوند<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
+              >
+            </li>
+            <li>
+              <span
+                >شاخص<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
+              >
             </li>
           </ul>
-        </nav>
-        <section class="logo">
-          <p>market<span class="logo-time">time</span>.ir</p>
         </section>
-        <ul class="date-time">
-          <li class="time">1:20:37</li>
-          <li>-</li>
-          <li class="date">3/14/2021&nbsp;</li>
-
-          <li>
-            <img src="./media/time-circle.svg" alt="time-circle" />
-          </li>
-          <li class="moon"><img src="./media/moon.svg" alt="moon" /></li>
-        </ul>
-      </section>
-
-      <section class="slideshow-container">
-        <a href="#" class="control-next"
-          ><i class="fa-solid fa-angle-right"></i
-        ></a>
-        <a href="#" class="control-prev"
-          ><i class="fa-solid fa-angle-left"></i
-        ></a>
-        <ul>
-          <li>
-            <span
-              >انس طلا<span><span>(۰.۳+)</span> ۱،۷۲۷.۵۵ </span></span
-            >
-          </li>
-          <li>
-            <span
-              >نفت برنت<span><span>(۰.۸+)</span> ۶،۹۱۸ </span></span
-            >
-          </li>
-          <li>
-            <span
-              >شاخص دلار<span><span>(۰.۳+)</span> ۱،۷۲۷.۵۵ </span></span
-            >
-          </li>
-          <li>
-            <span
-              >شاخص کل<span><span>(۰.۸-)</span> ۲۴۱،۷۷۰ </span></span
-            >
-          </li>
-          <li>
-            <span
-              >شاخص یورو<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
-            >
-          </li>
-          <li>
-            <span
-              >شاخص پوند<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
-            >
-          </li>
-          <li>
-            <span
-              >شاخص<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
-            >
-          </li>
-        </ul>
       </section>
     </header>
 
@@ -730,5 +733,6 @@
         </div>
       </section>
     </footer>
+    <script src="./JS/index.js"></script>
   </body>
 </html>
