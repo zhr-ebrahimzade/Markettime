@@ -93,6 +93,50 @@ header {
   border-right: #e3e3f1 1px solid;
   padding: 10px;
 }
+
+/* SLIDE SHOW */
+
+.title {
+  color: #2d283d;
+}
+.profit {
+  color: green;
+}
+.lost {
+  color: red;
+}
+.profit,
+.lost {
+  margin-right: 20px;
+}
+.content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.card {
+  background: #f8c030;
+}
+
+.card .card-content {
+  padding: 10px;
+  position: relative;
+  margin-right: -10px;
+  text-align: center;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px;
+}
+.header-partition {
+  background-color: #e5e5e5;
+  border: none;
+}
+/* .swiper-wrapper {
+  padding: 0 35px;
+}
+ */
 /* Media Queries */
 @media (max-width: 768px) {
   .toggle-button {
@@ -124,6 +168,11 @@ header {
     padding: 10px;
   }
   .date-time {
+    display: none;
+  }
+}
+@media (max-width: 1400px) {
+  .swiper {
     display: none;
   }
 }

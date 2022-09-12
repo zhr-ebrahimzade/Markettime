@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- FontAWesome -->
     <script
       src="https://kit.fontawesome.com/7219559ca6.js"
       crossorigin="anonymous"
@@ -15,8 +21,8 @@
   <body>
     <!-- -------------------------------Header------------------------------------ -->
     <header class="header">
-      <section class="container">
-        <section class="navbar">
+      <section>
+        <section class="navbar container">
           <nav class="nav">
             <ul class="nav-menu">
               <li>
@@ -55,52 +61,89 @@
             <span class="moon"><img src="./media/moon.svg" alt="moon" /></span>
           </section>
         </section>
+        <hr class="header-partiotion" />
+        <div class="container">
+          <section class="swiper mySwiper">
+            <ul class="swiper-wrapper content">
+              <li class="card swiper-slide">
+                <div class="card-content">
+                  <span class="title"
+                    >انس طلا<span
+                      ><span class="profit">(۰.۳+)</span>۱،۷۲۷.۵۵</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card-content">
+                  <span
+                    >نفت برنت<span
+                      ><span class="profit">(۰.۸+)</span>۶۹،۱۸</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card-content">
+                  <span
+                    >شاخص دلار<span
+                      ><span class="profit">(۰.۳+)</span>۱،۷۲۷.۵۵</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card-content">
+                  <span
+                    >شاخص کل<span
+                      ><span class="lost">(۰.۸-)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card-content">
+                  <span
+                    >شاخص یورو<span
+                      ><span class="profit">(۰.۸+)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card swiper-slide">
+                <div class="card-content">
+                  <span
+                    >شاخص پوند<span
+                      ><span class="profit">(۰.۸+)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card swiper-slide" id="last-card">
+                <div class="card-content">
+                  <span
+                    >شاخص<span
+                      ><span class="profit">(۰.۸+)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <!-- DELETE FROM HERE -->
+            </ul>
 
-        <section class="slideshow-container">
-          <a href="#" class="control-next"
-            ><i class="fa-solid fa-angle-right"></i
-          ></a>
-          <a href="#" class="control-prev"
-            ><i class="fa-solid fa-angle-left"></i
-          ></a>
-          <ul>
-            <li>
-              <span
-                >انس طلا<span><span>(۰.۳+)</span> ۱،۷۲۷.۵۵ </span></span
-              >
-            </li>
-            <li>
-              <span
-                >نفت برنت<span><span>(۰.۸+)</span> ۶،۹۱۸ </span></span
-              >
-            </li>
-            <li>
-              <span
-                >شاخص دلار<span><span>(۰.۳+)</span> ۱،۷۲۷.۵۵ </span></span
-              >
-            </li>
-            <li>
-              <span
-                >شاخص کل<span><span>(۰.۸-)</span> ۲۴۱،۷۷۰ </span></span
-              >
-            </li>
-            <li>
-              <span
-                >شاخص یورو<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
-              >
-            </li>
-            <li>
-              <span
-                >شاخص پوند<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
-              >
-            </li>
-            <li>
-              <span
-                >شاخص<span><span>(۰.۸+)</span> ۲۴۱،۷۷۰ </span></span
-              >
-            </li>
-          </ul>
-        </section>
+            <img
+              src="./media/slider-next.svg"
+              class="swiper-button-prev"
+              alt="previous"
+            />
+
+            <img
+              src="./media/slider-previous.svg"
+              class="swiper-button-next"
+              alt="next"
+            />
+          </section>
+        </div>
       </section>
     </header>
 
@@ -734,5 +777,9 @@
       </section>
     </footer>
     <script src="./JS/index.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./JS/header-slider.js"></script>
   </body>
 </html>
