@@ -5,15 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link Swiper's CSS -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+    /> -->
     <!-- FontAWesome -->
     <script
       src="https://kit.fontawesome.com/7219559ca6.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Bootstrap CSS -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./CSS/index.css" />
 
     <title>MarketTime</title>
@@ -21,8 +31,8 @@
   <body>
     <!-- -------------------------------Header------------------------------------ -->
     <header class="header">
-      <section>
-        <section class="navbar container">
+      <section class="wrapper">
+        <section class="navbar">
           <nav class="nav">
             <ul class="nav-menu">
               <li>
@@ -62,10 +72,15 @@
           </section>
         </section>
         <hr class="header-partiotion" />
-        <div class="container">
-          <section class="swiper mySwiper">
-            <ul class="swiper-wrapper content">
-              <li class="card swiper-slide">
+
+        <section
+          id="carouselExampleInterval"
+          class="carousel slide carousel-fade wrapper"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <ul class="carousel-item content active" data-bs-interval="5000">
+              <li class="card">
                 <div class="card-content">
                   <span class="title"
                     >انس طلا<span
@@ -74,7 +89,7 @@
                   >
                 </div>
               </li>
-              <li class="card swiper-slide">
+              <li class="card">
                 <div class="card-content">
                   <span
                     >نفت برنت<span
@@ -83,7 +98,7 @@
                   >
                 </div>
               </li>
-              <li class="card swiper-slide">
+              <li class="card">
                 <div class="card-content">
                   <span
                     >شاخص دلار<span
@@ -92,7 +107,7 @@
                   >
                 </div>
               </li>
-              <li class="card swiper-slide">
+              <li class="card">
                 <div class="card-content">
                   <span
                     >شاخص کل<span
@@ -101,7 +116,7 @@
                   >
                 </div>
               </li>
-              <li class="card swiper-slide">
+              <li class="card">
                 <div class="card-content">
                   <span
                     >شاخص یورو<span
@@ -110,7 +125,7 @@
                   >
                 </div>
               </li>
-              <li class="card swiper-slide">
+              <li class="card">
                 <div class="card-content">
                   <span
                     >شاخص پوند<span
@@ -119,7 +134,7 @@
                   >
                 </div>
               </li>
-              <li class="card swiper-slide" id="last-card">
+              <li class="card">
                 <div class="card-content">
                   <span
                     >شاخص<span
@@ -128,508 +143,635 @@
                   >
                 </div>
               </li>
-              <!-- DELETE FROM HERE -->
             </ul>
-
-            <img
-              src="./media/slider-next.svg"
-              class="swiper-button-prev"
-              alt="previous"
-            />
-
-            <img
-              src="./media/slider-previous.svg"
-              class="swiper-button-next"
-              alt="next"
-            />
-          </section>
-        </div>
+            <ul class="carousel-item content" data-bs-interval="5000">
+              <li class="card">
+                <div class="card-content">
+                  <span class="title"
+                    >sdfsedfsdf<span
+                      ><span class="profit">(۰.۳+)</span>۱،۷۲۷.۵۵</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card">
+                <div class="card-content">
+                  <span
+                    >نفت sdfsef<span
+                      ><span class="profit">(۰.۸+)</span>۶۹،۱۸</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card">
+                <div class="card-content">
+                  <span
+                    >شاخص دلار<span
+                      ><span class="profit">(۰.۳+)</span>۱،۷۲۷.۵۵</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card">
+                <div class="card-content">
+                  <span
+                    >شاخص کل<span
+                      ><span class="lost">(۰.۸-)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card">
+                <div class="card-content">
+                  <span
+                    >شاخص یورو<span
+                      ><span class="profit">(۰.۸+)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card">
+                <div class="card-content">
+                  <span
+                    >شاخص پوند<span
+                      ><span class="profit">(۰.۸+)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+              <li class="card">
+                <div class="card-content">
+                  <span
+                    >شاخص<span
+                      ><span class="profit">(۰.۸+)</span>۲۴۱،۷۷۰</span
+                    ></span
+                  >
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Buttons -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <img src="./media/slider-previous.svg" alt="next" />
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <img src="./media/slider-next.svg" alt="previous" />
+            <span class="visually-hidden">Next</span>
+          </button>
+        </section>
       </section>
     </header>
 
-    <main>
+    <main class="wrapper">
       <!-- -------------------------------Tables------------------------------------ -->
-      <section>
-        <!-- Table 1 -->
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/energy.svg" alt="energy-icon" /></th>
-                <th>انرژی</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>نفت برنت</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>گازوییل</td>
-                <td>۷۹.۶۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>گاز طبیعی</td>
-                <td>۸۲.۲۷</td>
-                <td>
-                  <span>(- ۰.۱۹)</span>
-                  <img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>بنزین</td>
-                <td>۹۹.۵۰</td>
-                <td>
-                  <span>(- ۰.۵۷)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>نفت سبک</td>
-                <td>۷۷.۸۰</td>
-                <td>
-                  <span>(- ۰.۹۹)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
-        <!-- table 2 -->
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/metal.svg" alt="metal-icon" /></th>
-                <th>فلزات</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>نقره</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>مس</td>
-                <td>۷۹.۶۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>پلاتین</td>
-                <td>۸۲.۲۷</td>
-                <td>
-                  <span>(- ۰.۱۹)</span>
-                  <img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>آلومینیوم</td>
-                <td>۹۹.۵۰</td>
-                <td>
-                  <span>(- ۰.۵۷)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>پالادیوم</td>
-                <td>۷۷.۸۰</td>
-                <td>
-                  <span>(- ۰.۹۹)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
-        <!-- table 3 -->
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/product.svg" alt="energy-icon" /></th>
-                <th>کالا</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>پنبه</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>رکش</td>
-                <td>۷۹.۶۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>گاز طبیعی</td>
-                <td>۸۲.۲۷</td>
-                <td>
-                  <span>(- ۰.۱۹)</span>
-                  <img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>بنزین</td>
-                <td>۹۹.۵۰</td>
-                <td>
-                  <span>(- ۰.۵۷)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>نفت سبک</td>
-                <td>۷۷.۸۰</td>
-                <td>
-                  <span>(- ۰.۹۹)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
+
+      <section class="table-container">
+        <!-- First Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <img src="./media/energy.svg" alt="energy-icon" /><span
+                  >انرژی</span
+                >
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td data-label="material">نفت برنت</td>
+              <td data-label="price">۶۹.۱۸</td>
+              <td data-label="change">
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="material">گازوییل</td>
+              <td data-label="price">۷۹.۶۸</td>
+              <td data-label="change">
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">گاز طبیعی</td>
+              <td data-label="price">۸۲.۲۷</td>
+              <td data-label="change">
+                <span>(- ۰.۱۹)</span>
+                <img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">بنزین</td>
+              <td data-label="price">۹۹.۵۰</td>
+              <td data-label="change">
+                <span>(- ۰.۵۷)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">نفت سبک</td>
+              <td data-label="price">۷۷.۸۰</td>
+              <td data-label="change">
+                <span>(- ۰.۹۹)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Second Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <img src="./media/metal.svg" alt="metal-icon" /><span
+                  >فلزات</span
+                >
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="material">نقره</td>
+              <td data-label="price">۶۹.۱۸</td>
+              <td data-label="change">
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="material">مس</td>
+              <td data-label="price">۷۹.۶۸</td>
+              <td data-label="change">
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">پلاتین</td>
+              <td data-label="price">۸۲.۲۷</td>
+              <td>
+                <span>(- ۰.۱۹)</span>
+                <img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">آلومینیوم</td>
+              <td data-label="price">۹۹.۵۰</td>
+              <td data-label="change">
+                <span>(- ۰.۵۷)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">پالادیوم</td>
+              <td data-label="price">۷۷.۸۰</td>
+              <td data-label="change">
+                <span>(- ۰.۹۹)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!--Third Table -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <img src="./media/product.svg" alt="energy-icon" /><span
+                  >کالا</span
+                >
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="material">پنبه</td>
+              <td data-label="price">۶۹.۱۸</td>
+              <td data-label="change">
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="material">رکش</td>
+              <td data-label="price">۷۹.۶۸</td>
+              <td data-label="change">
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">گاز طبیعی</td>
+              <td data-label="price">۸۲.۲۷</td>
+              <td data-label="change">
+                <span>(- ۰.۱۹)</span>
+                <img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">بنزین</td>
+              <td data-label="price">۹۹.۵۰</td>
+              <td data-label="change">
+                <span>(- ۰.۵۷)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td data-label="material">نفت سبک</td>
+              <td data-label="price">۷۷.۸۰</td>
+              <td data-label="change">
+                <span>(- ۰.۹۹)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
+
       <!-- --------------------------------------TRADING VIEW-------------------------------------------------- -->
-      <section>
-        <section></section>
-      </section>
+      <div class="wrapper wrapper-color">
+        <section class="trading">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div id="tradingview_75521"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://www.tradingview.com/symbols/NASDAQ-AAPL/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text">AAPL Chart</span></a
+              >
+              by TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/tv.js"
+            ></script>
+            <script type="text/javascript">
+              new TradingView.widget({
+                width: "100%",
+                height: 500,
+                symbol: "NASDAQ:AAPL",
+                interval: "D",
+                timezone: "Etc/UTC",
+                theme: "light",
+                style: "1",
+                locale: "en",
+                toolbar_bg: "#f1f3f6",
+                enable_publishing: false,
+                allow_symbol_change: true,
+                container_id: "tradingview_75521",
+              });
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </section>
+      </div>
       <!-- --------------------------------------BANNERS-------------------------------------------------- -->
-      <section>
-        <article>
-          <h3>بهترین سایت چارت های معاملاتی</h3>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است
-          </p>
+      <section class="banner-container">
+        <article class="banner blue-banner">
+          <div class="banner-text">
+            <h3>بهترین سایت چارت های معاملاتی</h3>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است
+            </p>
+            <div>
+              <a href="#">مشاهده</a>
+            </div>
+          </div>
           <div><img src="./media/banner1.svg" alt="best-charts" /></div>
-          <div>
-            <a href="#">مشاهده</a>
-          </div>
         </article>
-        <article>
-          <h3>بهترین سایت چارت های معاملاتی</h3>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است
-          </p>
+        <article class="banner yellow-banner">
+          <div class="banner-text">
+            <h3>بهترین سایت چارت های معاملاتی</h3>
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است
+            </p>
+            <div>
+              <a href="#">مشاهده</a>
+            </div>
+          </div>
           <div><img src="./media/banner2.svg" alt="best-charts" /></div>
-          <div>
-            <a href="#">مشاهده</a>
-          </div>
         </article>
       </section>
       <!-- --------------------------------------CURRENCY CHARTS 1-------------------------------------------------- -->
-      <section>
+      <section class="table-container chart-2-container">
         <!-- table 1 -->
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/currency.svg" alt="currency-icon" /></th>
-                <th>جفت ارزها</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>EUR/USD</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>۶۹.۱۸</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>GBP/USD</td>
-                <td>۷۹.۶۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>AUD/USD</td>
-                <td>۸۲.۲۷</td>
-                <td>
-                  <span>(- ۰.۱۹)</span>
-                  <img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>USD/CAD</td>
-                <td>۹۹.۵۰</td>
-                <td>
-                  <span>(- ۰.۵۷)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>USD/JPY</td>
-                <td>۷۷.۸۰</td>
-                <td>
-                  <span>(- ۰.۹۹)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- Table 2 -->
-        </article>
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/bourse.svg" alt="bourse-icon" /></th>
-                <th>بورس کشورها</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>نیویورک</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-                <td>
-                  <span> ۰-۵۸: ۰-۹ : ۰-۳</span
-                  ><img src="./media/time-circle.svg" alt="clock" />
-                </td>
-              </tr>
-              <tr>
-                <td>نیویورک</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-                <td>
-                  <span> ۰-۵۸: ۰-۹ : ۰-۳</span
-                  ><img src="./media/time-circle.svg" alt="clock" />
-                </td>
-              </tr>
-              <tr>
-                <td>نیویورک</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-                <td>
-                  <span> ۰-۵۸: ۰-۹ : ۰-۳</span
-                  ><img src="./media/time-circle.svg" alt="clock" />
-                </td>
-              </tr>
-              <tr>
-                <td>نیویورک</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-                <td>
-                  <span> ۰-۵۸: ۰-۹ : ۰-۳</span
-                  ><img src="./media/time-circle.svg" alt="clock" />
-                </td>
-              </tr>
-              <tr>
-                <td>نیویورک</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-                <td>
-                  <span> ۰-۵۸: ۰-۹ : ۰-۳</span
-                  ><img src="./media/time-circle.svg" alt="clock" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <img src="./media/currency.svg" alt="currency-icon" />
+                <span>جفت ارزها</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>EUR/USD</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>۶۹.۱۸</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>GBP/USD</td>
+              <td>۷۹.۶۸</td>
+              <td>
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>AUD/USD</td>
+              <td>۸۲.۲۷</td>
+              <td>
+                <span>(- ۰.۱۹)</span>
+                <img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>USD/CAD</td>
+              <td>۹۹.۵۰</td>
+              <td>
+                <span>(- ۰.۵۷)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>USD/JPY</td>
+              <td>۷۷.۸۰</td>
+              <td>
+                <span>(- ۰.۹۹)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Table 2 -->
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="4">
+                <img src="./media/bourse.svg" alt="bourse-icon" />
+                <span>بورس کشورها</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>نیویورک</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+              <td>
+                <span> ۰-۵۸: ۰-۹ : ۰-۳</span
+                ><img src="./media/time-circle.svg" alt="clock" />
+              </td>
+            </tr>
+            <tr>
+              <td>نیویورک</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+              <td>
+                <span> ۰-۵۸: ۰-۹ : ۰-۳</span
+                ><img src="./media/time-circle.svg" alt="clock" />
+              </td>
+            </tr>
+            <tr>
+              <td>نیویورک</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+              <td>
+                <span> ۰-۵۸: ۰-۹ : ۰-۳</span
+                ><img src="./media/time-circle.svg" alt="clock" />
+              </td>
+            </tr>
+            <tr>
+              <td>نیویورک</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+              <td>
+                <span> ۰-۵۸: ۰-۹ : ۰-۳</span
+                ><img src="./media/time-circle.svg" alt="clock" />
+              </td>
+            </tr>
+            <tr>
+              <td>نیویورک</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+              <td>
+                <span> ۰-۵۸: ۰-۹ : ۰-۳</span
+                ><img src="./media/time-circle.svg" alt="clock" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <!-- --------------------------------------CURRENCY CHARTS 1-------------------------------------------------- -->
-      <section>
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/dollar-icon.svg" alt="dollar-icon" /></th>
-                <th>ارزها</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>نفت برنت</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>گازوییل</td>
-                <td>۷۹.۶۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>گاز طبیعی</td>
-                <td>۸۲.۲۷</td>
-                <td>
-                  <span>(- ۰.۱۹)</span>
-                  <img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>بنزین</td>
-                <td>۹۹.۵۰</td>
-                <td>
-                  <span>(- ۰.۵۷)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>نفت سبک</td>
-                <td>۷۷.۸۰</td>
-                <td>
-                  <span>(- ۰.۹۹)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
+      <section class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <img src="./media/dollar-icon.svg" alt="dollar-icon" /><span
+                  >ارزها</span
+                >
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>نفت برنت</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>گازوییل</td>
+              <td>۷۹.۶۸</td>
+              <td>
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>گاز طبیعی</td>
+              <td>۸۲.۲۷</td>
+              <td>
+                <span>(- ۰.۱۹)</span>
+                <img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>بنزین</td>
+              <td>۹۹.۵۰</td>
+              <td>
+                <span>(- ۰.۵۷)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>نفت سبک</td>
+              <td>۷۷.۸۰</td>
+              <td>
+                <span>(- ۰.۹۹)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
         <!-- table 2 -->
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/bitcoin.svg" alt="bitcoin-icon" /></th>
-                <th>ارز دیجیتال</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>نقره</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>مس</td>
-                <td>۷۹.۶۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>پلاتین</td>
-                <td>۸۲.۲۷</td>
-                <td>
-                  <span>(- ۰.۱۹)</span>
-                  <img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>آلومینیوم</td>
-                <td>۹۹.۵۰</td>
-                <td>
-                  <span>(- ۰.۵۷)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>پالادیوم</td>
-                <td>۷۷.۸۰</td>
-                <td>
-                  <span>(- ۰.۹۹)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <img src="./media/bitcoin.svg" alt="bitcoin-icon" /><span
+                  >ارز دیجیتال</span
+                >
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>نقره</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>مس</td>
+              <td>۷۹.۶۸</td>
+              <td>
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>پلاتین</td>
+              <td>۸۲.۲۷</td>
+              <td>
+                <span>(- ۰.۱۹)</span>
+                <img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>آلومینیوم</td>
+              <td>۹۹.۵۰</td>
+              <td>
+                <span>(- ۰.۵۷)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>پالادیوم</td>
+              <td>۷۷.۸۰</td>
+              <td>
+                <span>(- ۰.۹۹)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
         <!-- table 3 -->
-        <article>
-          <table>
-            <thead>
-              <tr>
-                <th><img src="./media/coins.svg" alt="golden-coin-icon" /></th>
-                <th>سکه طلا</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>پنبه</td>
-                <td>۶۹.۱۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span
-                  ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>رکش</td>
-                <td>۷۹.۶۸</td>
-                <td>
-                  <span>(+ ۰.۸)</span>
-                  <img src="./media/uprise-arrow.svg" alt="arrow-up" />
-                </td>
-              </tr>
-              <tr>
-                <td>گاز طبیعی</td>
-                <td>۸۲.۲۷</td>
-                <td>
-                  <span>(- ۰.۱۹)</span>
-                  <img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>بنزین</td>
-                <td>۹۹.۵۰</td>
-                <td>
-                  <span>(- ۰.۵۷)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-              <tr>
-                <td>نفت سبک</td>
-                <td>۷۷.۸۰</td>
-                <td>
-                  <span>(- ۰.۹۹)</span
-                  ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </article>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th colspan="3">
+                <img src="./media/coins.svg" alt="golden-coin-icon" />
+                <span>سکه طلا</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>پنبه</td>
+              <td>۶۹.۱۸</td>
+              <td>
+                <span>(+ ۰.۸)</span
+                ><img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>رکش</td>
+              <td>۷۹.۶۸</td>
+              <td>
+                <span>(+ ۰.۸)</span>
+                <img src="./media/uprise-arrow.svg" alt="arrow-up" />
+              </td>
+            </tr>
+            <tr>
+              <td>گاز طبیعی</td>
+              <td>۸۲.۲۷</td>
+              <td>
+                <span>(- ۰.۱۹)</span>
+                <img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>بنزین</td>
+              <td>۹۹.۵۰</td>
+              <td>
+                <span>(- ۰.۵۷)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+            <tr>
+              <td>نفت سبک</td>
+              <td>۷۷.۸۰</td>
+              <td>
+                <span>(- ۰.۹۹)</span
+                ><img src="./media/downrise-arrow.svg" alt="down-arrow" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <!-- ---------------------------------------LATEST NEWS------------------------------------------------- -->
       <section class="slideshow-container">
@@ -778,8 +920,12 @@
     </footer>
     <script src="./JS/index.js"></script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="./JS/header-slider.js"></script>
+    <!-- Bootstrapp -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
