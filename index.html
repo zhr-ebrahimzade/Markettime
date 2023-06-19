@@ -2,13 +2,10 @@
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Link Swiper's CSS -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    /> -->
+
     <!-- FontAWesome -->
     <script
       src="https://kit.fontawesome.com/7219559ca6.js"
@@ -25,8 +22,37 @@
     />
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./CSS/index.css" />
+    <!-- JQUERY -->
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!-- JAAR Widget -->
 
     <title>MarketTime</title>
+    <link
+      href="https:/6/www.jaaar.com/widget/newsstand/v2/assets/images/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.jaaar.com/widget/newsstand/v2/assets/css/main.min.css"
+      type="text/css"
+      media="screen"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.jaaar.com/widget/newsstand/v2/assets/css/style-dark.min.css"
+      type="text/css"
+      media="screen"
+    />
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-26161814-2"]);
+      _gaq.push(["_setDomainName", "jaaar.com"]);
+      _gaq.push(["_trackPageview"]);
+    </script>
   </head>
   <body>
     <!-- -------------------------------Header------------------------------------ -->
@@ -72,7 +98,7 @@
           </section>
         </section>
         <hr class="header-partiotion" />
-
+        <!-- sliders -->
         <section
           id="carouselExampleInterval"
           class="carousel slide carousel-fade wrapper"
@@ -141,6 +167,7 @@
                       ><span class="profit">(۰.۸+)</span>۲۴۱،۷۷۰</span
                     ></span
                   >
+                
                 </div>
               </li>
             </ul>
@@ -774,6 +801,7 @@
         </table>
       </section>
       <!-- ---------------------------------------LATEST NEWS------------------------------------------------- -->
+<!--       
       <section class="slideshow-container">
         <h2>آخرین اخبار</h2>
         <a href="#" class="control-next"
@@ -844,9 +872,10 @@
             </article>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- ---------------------------------------First Pages------------------------------------------------- -->
-      <section>
+
+      <!-- <section>
         <h2>صفحه اول روزنامه های کشور</h2>
         <a href="#" class="control-next"
           ><i class="fa-solid fa-angle-right"></i
@@ -880,7 +909,7 @@
             </figure>
           </li>
         </ul>
-      </section>
+      </section> -->
     </main>
     <!-- Footer -->
     <footer class="footer">
@@ -928,10 +957,65 @@
 
     <!-- Bootstrapp -->
     <!-- JavaScript Bundle with Popper -->
+    <!-- JavaScript Bundle with Popper -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <!-- JAAR Widget
+     -->
+    <script src="https://www.jaaar.com/widget/newsstand/v2/assets/js/widget.min.js"></script>
+    <script>
+      window.domready = false;
+
+      document.domain = "www.jaaar.com";
+      window.onFail = window.onFail || function () {};
+      window.onInitialized = window.onInitialized || function () {};
+      window.onUpdate = window.onUpdate || function () {};
+
+      window.jaaarWidgetClassPrefix = "jaaar-widget-";
+      window.jaaarWidgetIdPrefix = "jaaar-widget-";
+
+      window.jaaar = window.jaaar || {};
+      (function ($) {
+        $(function () {
+          window.jaaar.widget = window.Jaaar.widget({
+            hideThumbnails: 0,
+            autoPlay: 1,
+            hasDate: 0,
+            hasTitle: 0,
+            hasLogo: 1,
+            hasAutoplayController: 1,
+            basePath: "https://www.jaaar.com/widget/newsstand/v2/",
+            purchasable: 0,
+            jsonPath:
+              "https://www.jaaar.com/widget/newsstand/data/json/todays-issues.json?" +
+              ("".length ? "" : Date.now()),
+            autoplayDuration: 7000,
+            loadMobile: 1,
+            onUpdate: window.onUpdate,
+            onInitialized: window.onInitialized,
+            onFail: window.onFail,
+            filters: null,
+          });
+
+          window.domready = true;
+          window.onDomready && window.onDomready();
+
+          (function () {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript";
+            ga.async = true;
+            ga.src =
+              ("https:" == document.location.protocol
+                ? "https://ssl"
+                : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>

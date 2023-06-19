@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
 }
+
 header {
   background-color: #fff;
 }
@@ -107,7 +108,7 @@ header {
 }
 .carousel-item.active {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .carousel-control-next,
 .carousel-control-prev {
@@ -274,7 +275,7 @@ thead span {
 .footer {
   background-color: #fff;
   padding: 10px;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 .footer-container {
   padding: 0.5rem 1.5rem;
@@ -336,6 +337,13 @@ thead span {
   color: #fff;
   font-weight: bold;
   background-color: #f5c038;
+}
+/* JAAAR */
+.jaaar-widget-header {
+  display: none;
+}
+.jaaar-widget-container {
+  display: none;
 }
 
 /* Media Queries */
@@ -441,4 +449,10 @@ thead span {
     font-weight: bold;
     text-align: left;
   }
+}
+
+
+
+.carousel-inner{
+  padding: 0 20px;
 }
